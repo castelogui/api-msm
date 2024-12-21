@@ -1,9 +1,9 @@
-export interface CreateUserRequest {
+export interface ListUserResponse {
+  id: string;
   username: string;
   firstname: string;
   lastname: string;
   email: string;
   cpf: string;
-  password: string;
   dt_birth: Date;
 }

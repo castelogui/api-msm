@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,14 +7,50 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Permission {
+  id         String    @id @default(uuid())
+  name       String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  roles Role[] // Relacionamento direto com papéis (roles)
+
+  @@map("permissions")
+}
+
+model Role {
+  id         String    @id @default(uuid())
+  name       String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  permissions Permission[] // Lista de permissões associadas ao papel
+  users       User[] // Lista de usuários com esse papel
+
+  @@map("roles")
+}
+
 model User {
-  id       String @id @default(uuid())
-  name     String
-  email    String
-  password String
+  id        String   @id @default(uuid())
+  username  String   @unique
+  firstname String
+  lastname  String
+  email     String   @unique
+  cpf       String   @unique
+  password  String
+  dt_birth  DateTime
 
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
+
+  roles   Role[]
+  courses Course[]
+
+  // Relação de professor
+  teacherInvoices Invoice[] @relation(name: "TeacherInvoices")
+
+  // Relação de estudante
+  studantInvoices Invoice[] @relation(name: "StudantInvoices")
 
   @@map("users")
 }
@@ -59,4 +92,33 @@ model Item {
   product_id String
 
   @@map("items")
+}
+
+model Course {
+  id          String @id @default(uuid())
+  name        String
+  description String
+  price       Float
+  teacher     User   @relation(fields: [teacher_id], references: [id])
+  teacher_id  String
+
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  invoices Invoice[]
+}
+
+model Invoice {
+  id           String    @id @default(uuid())
+  total        Float
+  created_at   DateTime? @default(now())
+  updated_at   DateTime? @default(now())
+  payment_type String
+
+  teacher    User   @relation(name: "TeacherInvoices", fields: [teacher_id], references: [id])
+  teacher_id String
+  studant    User   @relation(name: "StudantInvoices", fields: [studant_id], references: [id])
+  studant_id String
+  course     Course @relation(fields: [course_id], references: [id])
+  course_id  String
 }

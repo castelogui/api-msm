@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1734793544289" clover="3.2.0">
+  <project timestamp="1734793544289" name="All files">
+    <metrics statements="167" coveredstatements="94" conditionals="51" coveredconditionals="22" methods="33" coveredmethods="15" elements="251" coveredelements="131" complexity="0" loc="167" ncloc="167" packages="9" files="31" classes="31"/>
+    <package name="src">
+      <metrics statements="23" coveredstatements="22" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="app.ts" path="C:\dev\stock-api\src\app.ts">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="routes.ts" path="C:\dev\stock-api\src\routes.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+      </file>
+      <file name="server.ts" path="C:\dev\stock-api\src\server.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers.category">
+      <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="CreateCategoryController.ts" path="C:\dev\stock-api\src\controllers\category\CreateCategoryController.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="DeleteCategoryController.ts" path="C:\dev\stock-api\src\controllers\category\DeleteCategoryController.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="EditCategoryController.ts" path="C:\dev\stock-api\src\controllers\category\EditCategoryController.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="ListCategoriesController.ts" path="C:\dev\stock-api\src\controllers\category\ListCategoriesController.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers.product">
+      <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="CreateProductController.ts" path="C:\dev\stock-api\src\controllers\product\CreateProductController.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+      <file name="DeleteProductController.ts" path="C:\dev\stock-api\src\controllers\product\DeleteProductController.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="EditProductController.ts" path="C:\dev\stock-api\src\controllers\product\EditProductController.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="ListProductsController.ts" path="C:\dev\stock-api\src\controllers\product\ListProductsController.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="SaleProductController.ts" path="C:\dev\stock-api\src\controllers\product\SaleProductController.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers.user">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="AuthUserController.ts" path="C:\dev\stock-api\src\controllers\user\AuthUserController.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+      </file>
+      <file name="CreateUserController.ts" path="C:\dev\stock-api\src\controllers\user\CreateUserController.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+      <file name="EditUserController.ts" path="C:\dev\stock-api\src\controllers\user\EditUserController.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+      <file name="ListUserController.ts" path="C:\dev\stock-api\src\controllers\user\ListUserController.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.middlewares">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="isAuthenticated.ts" path="C:\dev\stock-api\src\middlewares\isAuthenticated.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="13" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="17" type="stmt"/>
+        <line num="19" count="17" type="stmt"/>
+        <line num="21" count="17" type="stmt"/>
+        <line num="22" count="15" type="stmt"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.prisma">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\dev\stock-api\src\prisma\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.category">
+      <metrics statements="15" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="CreateCategoryService.ts" path="C:\dev\stock-api\src\services\category\CreateCategoryService.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="DeleteCategoryService.ts" path="C:\dev\stock-api\src\services\category\DeleteCategoryService.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="EditCategoryService.ts" path="C:\dev\stock-api\src\services\category\EditCategoryService.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="ListCategoriesService.ts" path="C:\dev\stock-api\src\services\category\ListCategoriesService.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.product">
+      <metrics statements="21" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="CreateProductService.ts" path="C:\dev\stock-api\src\services\product\CreateProductService.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+      <file name="DeleteProductService.ts" path="C:\dev\stock-api\src\services\product\DeleteProductService.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="EditProductService.ts" path="C:\dev\stock-api\src\services\product\EditProductService.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="ListProductsService.ts" path="C:\dev\stock-api\src\services\product\ListProductsService.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="SaleProductService.ts" path="C:\dev\stock-api\src\services\product\SaleProductService.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.user">
+      <metrics statements="46" coveredstatements="46" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="9"/>
+      <file name="AuthUserService.ts" path="C:\dev\stock-api\src\services\user\AuthUserService.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="24" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="52" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="2" type="stmt"/>
+      </file>
+      <file name="CreateUserService.ts" path="C:\dev\stock-api\src\services\user\CreateUserService.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="54" count="31" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="60" count="15" type="stmt"/>
+        <line num="66" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="67" count="3" type="stmt"/>
+      </file>
+      <file name="EditUserService.ts" path="C:\dev\stock-api\src\services\user\EditUserService.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="9" methods="3" coveredmethods="3"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="12" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+      </file>
+      <file name="ListUserService.ts" path="C:\dev\stock-api\src\services\user\ListUserService.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

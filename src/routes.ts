@@ -13,12 +13,18 @@ import { EditProductController } from "./controllers/product/EditProductControll
 import { ListProductsController } from "./controllers/product/ListProductsController";
 import { DeleteProductController } from "./controllers/product/DeleteProductController";
 import { SaleProductController } from "./controllers/product/SaleProductController";
+import { EditUserController } from "./controllers/user/EditUserController";
+import { ListUserController } from "./controllers/user/ListUserController";
 
 const router = Router();
 
-/* USER */
-router.post("/user", new CreateUserController().handle);
+/* AUTH */
 router.post("/auth", new AuthUserController().handle);
+
+/* USER */
+router.post("/user", isAuthenticated, new CreateUserController().handle);
+router.get("/user", isAuthenticated, new ListUserController().handle);
+router.put("/user/:id", isAuthenticated, new EditUserController().handle);
 
 /* CATEGORY */
 router.post(

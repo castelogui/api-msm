@@ -5,13 +5,9 @@ import { AuthUserRequest } from "../../models/interfaces/user/AuthUserRequest";
 
 class AuthUserService {
   async execute({ email, password }: AuthUserRequest) {
-    if (!email) {
-      throw new Error("Email precisa ser enviado!");
-    }
-
-    if (!password) {
-      throw new Error("A senha precisa ser enviado!");
-    }
+    await checkRequiridField("email", email);
+    await checkRequiridField("password", password);
+    
 
     const user = await prismaClient.user.findFirst({
       where: {
@@ -31,7 +27,7 @@ class AuthUserService {
 
     const token = sign(
       {
-        name: user?.name,
+        name: user?.username,
         email: user?.email,
       },
       process.env.JWT_SECRET as string,
@@ -43,7 +39,7 @@ class AuthUserService {
 
     return {
       id: user?.id,
-      name: user?.name,
+      name: user?.username,
       email: user?.email,
       token: token,
     };
@@ -51,3 +47,9 @@ class AuthUserService {
 }
 
 export { AuthUserService };
+
+async function checkRequiridField(field: string, value: string) {
+  if (!value) {
+    throw new Error(`Invalid field, ${field} cannot be null`);
+  }
+}
