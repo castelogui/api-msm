@@ -98,7 +98,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="https://github.com/castelogui/" title="Github de Guilherme Castelo">
-        <img src="https://avatars3.githubusercontent.com/u/castelogui" width="100px;" alt="Foto do Guilherme Castelo no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/48875867?v=4" width="100px;" alt="Foto do Guilherme Castelo no GitHub"/><br>
         <sub>
           <b>Guilherme Castelo</b>
         </sub>
