@@ -13,8 +13,8 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [ ] Features de Users
-  - [ ] CRUD
-  - [ ] Testes te Integração
+  - [x] CRUD
+  - [x] Testes te Integração
   - [ ] Documentação com Swagger
 - [ ] Features de Permissões
   - [ ] CRUD
