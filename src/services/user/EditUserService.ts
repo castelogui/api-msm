@@ -12,19 +12,11 @@ class EditUserService {
     if (!existingUser) {
       throw new Error("User not found");
     }
-    if (userData.email) {
-      await checkAlreadyExists("email", userData.email);
-    }
-    if (userData.username) {
-      await checkAlreadyExists("username", userData.username);
-    }
-    if (userData.cpf) {
-      await checkAlreadyExists("cpf", userData.cpf);
-    }
+    await checkAlreadyExists("email", userData.email);
+    await checkAlreadyExists("username", userData.username);
+    await checkAlreadyExists("cpf", userData.cpf);
     // Caso o usuário esteja atualizando a senha, ela é encriptada
-    if (userData.password) {
-      userData.password = await hash(userData.password, 8);
-    }
+    userData.password = userData.password ? await hash(userData.password, 8) : undefined;
     // Atualiza os dados do usuário
     const updatedData = { ...userData };
 
@@ -41,6 +33,9 @@ class EditUserService {
 export { EditUserService };
 
 async function checkAlreadyExists(field: string, value: string) {
+  if (!value) {
+    return;
+  }
   await prismaClient.user.findFirst({
     where: {
       [field]: value,
