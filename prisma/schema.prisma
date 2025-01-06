@@ -39,7 +39,7 @@ model User {
   cpf       String   @unique
   password  String
   dt_birth  DateTime
-
+  status    Boolean  @default(true)
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 
