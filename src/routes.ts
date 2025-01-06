@@ -15,6 +15,7 @@ import { DeleteProductController } from "./controllers/product/DeleteProductCont
 import { SaleProductController } from "./controllers/product/SaleProductController";
 import { EditUserController } from "./controllers/user/EditUserController";
 import { ListUserController } from "./controllers/user/ListUserController";
+import { DeleteUserController } from "./controllers/user/DeleteUserController";
 
 const router = Router();
 
@@ -25,6 +26,7 @@ router.post("/auth", new AuthUserController().handle);
 router.post("/user", isAuthenticated, new CreateUserController().handle);
 router.get("/user", isAuthenticated, new ListUserController().handle);
 router.put("/user/:id", isAuthenticated, new EditUserController().handle);
+router.delete("/user/:id", isAuthenticated, new DeleteUserController().handle);
 
 /* CATEGORY */
 router.post(
