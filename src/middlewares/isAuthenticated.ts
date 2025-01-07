@@ -7,6 +7,13 @@ export function isAuthenticated(
   response: Response,
   next: NextFunction
 ) {
+  // Carregar a URL de documentação do .env
+  const authorizedUrl = process.env.AUTHORIZED_URL;
+
+  if (request.rawHeaders.includes(authorizedUrl)) {
+    return next(); // Deixa que a requisição prossiga
+  }
+
   // Acessar token JWT
   const authToken = request.headers.authorization;
 
