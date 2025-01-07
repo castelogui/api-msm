@@ -30,5 +30,5 @@ const swaggerSpec = swaggerJSDoc(options);
 
 // Função que retorna o middleware do Swagger
 export const setupSwagger = (app: any) => {
-  app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 };

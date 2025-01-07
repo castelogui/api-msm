@@ -49,7 +49,49 @@
  *                 format: date
  *                 description: A data de nascimento do usuário
  *                 example: 1990-01-01T00:00:00Z
-*/
+ *     responses:
+ *       201:
+ *         description: Usuário criado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: string
+ *                   description: O ID do usuário recém-criado
+ *                   example: d8c2a7a6-4347-4e2e-8216-e4c3c26defa6
+ *                 username:
+ *                   type: string
+ *                   description: O nome de usuário do novo usuário
+ *                   example: jdoe
+ *                 firstname:
+ *                   type: string
+ *                   description: O primeiro nome do usuário
+ *                   example: John
+ *                 lastname:
+ *                   type: string
+ *                   description: O sobrenome do usuário
+ *                   example: Doe
+ *                 email:
+ *                   type: string
+ *                   format: email
+ *                   description: O endereço de e-mail do usuário
+ *                   example: johndoe@example.com
+ *                 cpf:
+ *                   type: string
+ *                   description: O CPF do usuário
+ *                   example: 123.456.789-00
+ *                 dt_birth:
+ *                   type: string
+ *                   format: date
+ *                   description: A data de nascimento do usuário
+ *                   example: 1990-01-01T00:00:00Z
+ *       400:
+ *         description: This <username / cpf / email> already exists | Invalid field, <username / cpf / email> cannot be null
+ *       500:
+ *         description: Internal server error
+ */
 
 /**
  * @swagger
@@ -68,9 +110,9 @@
  *                 type: object
  *                 properties:
  *                    id:
- *                      type: integer
+ *                      type: string
  *                      description: O ID do usuário recém-criado
- *                      example: 1
+ *                      example: d8c2a7a6-4347-4e2e-8216-e4c3c26defa6
  *                    username:
  *                      type: string
  *                      description: O nome de usuário do novo usuário
@@ -97,6 +139,20 @@
  *                      format: date
  *                      description: A data de nascimento do usuário
  *                      example: 1990-01-01T00:00:00Z
+ *                    status:
+ *                      type: boolean
+ *                      description: Se o user esta ativo ou não
+ *                      example: true
+ *                    created_at:
+ *                      type: string
+ *                      format: date
+ *                      description: A data de cadastro do usuário
+ *                      example: 2025-01-01T00:00:00Z
+ *                    updated_at:
+ *                      type: string
+ *                      format: date
+ *                      description: A data de atualização do usuário
+ *                      example: 2025-01-01T00:00:00Z
  */
 
 /**
@@ -111,8 +167,8 @@
  *         required: true
  *         description: O ID do usuário a ser atualizado
  *         schema:
- *           type: integer
- *           example: 1
+ *           type: string
+ *           example: d8c2a7a6-4347-4e2e-8216-e4c3c26defa6
  *     requestBody:
  *       required: true
  *       content:
@@ -122,13 +178,27 @@
  *             properties:
  *               username:
  *                 type: string
+ *                 example: jdoe-updated
  *               firstname:
  *                 type: string
+ *                 example: John-updated
  *               lastname:
  *                 type: string
+ *                 example: Doe-updated
  *               email:
  *                 type: string
  *                 format: email
+ *                 example: johndoe-updated@example.com
+ *               cpf:
+ *                 type: string
+ *                 example: 123.456.789-00
+ *               dt_birth:
+ *                 type: string
+ *                 format: date
+ *                 example: 1990-01-01T00:00:00Z
+ *               status:
+ *                 type: boolean
+ *                 example: true
  *     responses:
  *       200:
  *         description: Usuário atualizado com sucesso
@@ -150,8 +220,8 @@
  *         required: true
  *         description: O ID do usuário a ser deletado
  *         schema:
- *           type: integer
- *           example: 1
+ *           type: string
+ *           example: d8c2a7a6-4347-4e2e-8216-e4c3c26defa6
  *     responses:
  *       200:
  *         description: Usuário deletado com sucesso
