@@ -14,6 +14,7 @@ const userData = {
   cpf: "12345678907",
   password: "password123",
   dt_birth: new Date("1990-01-01"),
+  role_id: "1"
 }
 
 const userData2 = {
@@ -24,6 +25,7 @@ const userData2 = {
   cpf: "12345678908",
   password: "password123",
   dt_birth: new Date("1999-01-01"),
+  role_id: "1"
 }
 
 // Função para realizar login e obter o token JWT
@@ -55,6 +57,7 @@ describe('User editing', () => {
       cpf: '00000000000',
       password: pass,
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     await prismaClient.user.create({ data: userAdmin })
