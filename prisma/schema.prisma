@@ -8,11 +8,11 @@ datasource db {
 }
 
 model Permission {
-  id         String    @id @default(uuid())
-  name       String
+  id          String    @id @default(uuid())
+  name        String    @unique
   description String
-  created_at DateTime? @default(now())
-  updated_at DateTime? @default(now())
+  created_at  DateTime? @default(now())
+  updated_at  DateTime? @default(now())
 
   roles Role[] // Relacionamento direto com papéis (roles)
 
@@ -20,31 +20,33 @@ model Permission {
 }
 
 model Role {
-  id         String    @id @default(uuid())
-  name       String
-  created_at DateTime? @default(now())
-  updated_at DateTime? @default(now())
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String?
+  created_at  DateTime? @default(now())
+  updated_at  DateTime? @default(now())
 
   permissions Permission[] // Lista de permissões associadas ao papel
-  users       User[] // Lista de usuários com esse papel
+  users       User[] // Relacionamento entre papéis e usuários
 
   @@map("roles")
 }
 
 model User {
-  id        String   @id @default(uuid())
-  username  String   @unique
-  firstname String
-  lastname  String
-  email     String   @unique
-  cpf       String   @unique
-  password  String
-  dt_birth  DateTime
-  status    Boolean  @default(true)
+  id         String    @id @default(uuid())
+  username   String    @unique
+  firstname  String
+  lastname   String
+  email      String    @unique
+  cpf        String    @unique
+  password   String
+  dt_birth   DateTime
+  status     Boolean   @default(true)
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 
-  roles   Role[]
+  role    Role?    @relation(fields: [role_id], references: [id]) // Usuário possui apenas um papel
+  role_id String?
   courses Course[]
 
   // Relação de professor
