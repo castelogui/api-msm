@@ -32,6 +32,7 @@ describe('User creation', () => {
       cpf: '00000000000',
       password: pass,
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     await prismaClient.user.create({ data: userData })
@@ -56,6 +57,7 @@ describe('User creation', () => {
       cpf: '12345678901',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1',
     };
 
     const response = await request(server).post("/user")
@@ -76,6 +78,7 @@ describe('User creation', () => {
       cpf: '12345678901-invalidtoken',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     const response = await request(server).post("/user").set("Authorization", `Bearer 123456`).send(userData);
@@ -94,6 +97,7 @@ describe('User creation', () => {
       cpf: '12345678901-invalidtoken',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     const response = await request(server).post("/user").set("Authorization", ``).send(userData);
@@ -112,6 +116,7 @@ describe('User creation', () => {
       cpf: '12345678902',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     // Tenta criar o usuário e valida o erro: email repetido
@@ -133,6 +138,7 @@ describe('User creation', () => {
       cpf: '12345678903',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     // Tenta criar o usuário e valida o erro: username repetido
@@ -153,6 +159,7 @@ describe('User creation', () => {
       cpf: '12345678901',
       password: 'password123',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     // Tenta criar o usuário e valida o erro: cpf repetido
@@ -174,6 +181,7 @@ describe('User creation', () => {
       firstname: 'John 4',
       lastname: 'Doe 4',
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     // Tenta criar o usuário e valida o erro: cpf e email indefinido

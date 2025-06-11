@@ -10,12 +10,23 @@ class CreateUserService {
     await checkRequiridField("password", userData.password);
     await checkRequiridField("firstname", userData.firstname);
     await checkRequiridField("lastname", userData.lastname);
+    await checkRequiridField("role_id", userData.role_id); // Verificar se o papel foi informado
 
     // Verificando se já existe um usuário com o email, cpf ou username informado
     await checkAlreadyExists("email", userData.email);
     await checkAlreadyExists("cpf", userData.cpf);
     await checkAlreadyExists("username", userData.username);
 
+    // Verificando se o papel informado é válido
+    const roleExists = await prismaClient.role.findUnique({
+      where: {
+        id: userData.role_id,
+      },
+    });
+
+    if (!roleExists) {
+      throw new Error("Invalid roleId, the specified role does not exist");
+    }
 
     // Encriptando a nossa senha do usuário
     const passwordHash = await hash(userData.password, 8);
@@ -30,6 +41,7 @@ class CreateUserService {
         username: userData.username,
         email: userData.email,
         password: passwordHash,
+        role_id: userData.role_id, // Associando o papel ao usuário
       },
       select: {
         id: true,
@@ -41,6 +53,12 @@ class CreateUserService {
         dt_birth: true,
         created_at: true,
         updated_at: true,
+        role: {
+          select: {
+            id: true,
+            name: true,
+          },
+        },
       },
     });
 
