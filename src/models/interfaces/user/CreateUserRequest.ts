@@ -6,4 +6,5 @@ export interface CreateUserRequest {
   cpf: string;
   password: string;
   dt_birth: Date;
+  role_id: string
 }

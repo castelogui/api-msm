@@ -35,6 +35,7 @@ describe('User deletion', () => {
       cpf: '00000000000',
       password: pass,
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     // Cria um usuário para usar no delete

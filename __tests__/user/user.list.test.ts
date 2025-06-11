@@ -31,6 +31,7 @@ describe("User listing", () => {
       cpf: '00000000000',
       password: pass,
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     await prismaClient.user.create({ data: userData })

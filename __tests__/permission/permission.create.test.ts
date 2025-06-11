@@ -22,6 +22,18 @@ describe('Permission creation', () => {
     // Limpa o banco de dados antes dos testes
     await prismaClient.permission.deleteMany({});
     await prismaClient.user.deleteMany({});
+    await prismaClient.role.deleteMany({});
+
+    // Cria a role padrão para o usuário admin
+    await prismaClient.role.create({
+      data: {
+        id: "1",
+        name: "Admin",
+        description: "Administrador da escola de música",
+        created_at: new Date(),
+        updated_at: new Date()
+      },
+    });
 
     // Cria um usuário para usar no login
     const pass = await hash('admin', 8)
@@ -33,6 +45,7 @@ describe('Permission creation', () => {
       cpf: '00000000000',
       password: pass,
       dt_birth: new Date('1990-01-01'),
+      role_id: '1'
     };
 
     await prismaClient.user.create({ data: userData })
