@@ -13,24 +13,64 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [ ] Features de Users
-  - [x] CRUD
+  - [x] Feature
+    - [x] Create
+    - [x] Read
+    - [x] Update
+    - [x] Delete
   - [x] Testes te Integração
+    - [x] Test Create
+    - [x] Test Read
+    - [x] Test Update
+    - [x] Test Delete
   - [ ] Documentação com Swagger
 - [ ] Features de Permissões
-  - [ ] CRUD
+  - [ ] Feature
+    - [x] Create
+    - [ ] Read
+    - [ ] Update
+    - [ ] Delete
   - [ ] Testes te Integração
+    - [x] Test Create
+    - [ ] Test Read
+    - [ ] Test Update
+    - [ ] Test Delete
   - [ ] Documentação com Swagger
 - [ ] Features de Papeis
-  - [ ] CRUD
+  - [ ] Feature
+    - [ ] Create
+    - [ ] Read
+    - [ ] Update
+    - [ ] Delete
   - [ ] Testes te Integração
+    - [ ] Test Create
+    - [ ] Test Read
+    - [ ] Test Update
+    - [ ] Test Delete
   - [ ] Documentação com Swagger
 - [ ] Features de Cursos
-  - [ ] CRUD
+  - [ ] Feature
+    - [ ] Create
+    - [ ] Read
+    - [ ] Update
+    - [ ] Delete
   - [ ] Testes te Integração
+    - [ ] Test Create
+    - [ ] Test Read
+    - [ ] Test Update
+    - [ ] Test Delete
   - [ ] Documentação com Swagger
 - [ ] Features de Faturas
-  - [ ] CRUD
+  - [ ] Feature
+    - [ ] Create
+    - [ ] Read
+    - [ ] Update
+    - [ ] Delete
   - [ ] Testes te Integração
+    - [ ] Test Create
+    - [ ] Test Read
+    - [ ] Test Update
+    - [ ] Test Delete
   - [ ] Documentação com Swagger
 
 ## 💻 Pré-requisitos
